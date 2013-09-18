@@ -6,18 +6,21 @@ class Mixin {
 
     protected $container;
 
-    protected static $_provides = array();
+    protected static $_providedMethods = array();
 
     function __construct($container) {
         $this->container = $container;
 
     }
 
-    public static function provides() {
+    public static function providedMethods() {
         $class = get_called_class();
-        if (!isset(static::$_provides[$class])) {
-            static::$_provides[$class] = get_class_methods($class);
+        if (!isset(static::$_providedMethods[$class])) {
+            static::$_providedMethods[$class] = array_diff(
+                get_class_methods($class),
+                array('__construct', 'providedMethods')
+            );
         }
-        return static::$_provides[$class];
+        return static::$_providedMethods[$class];
     }
 }

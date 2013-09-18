@@ -16,7 +16,7 @@ class Mixin {
     public static function provides() {
         $class = get_called_class();
         if (!isset(static::$_provides[$class])) {
-            static::$_provides[$class] = get_class_methods(get_called_class());
+            static::$_provides[$class] = get_class_methods($class);
         }
         return static::$_provides[$class];
     }

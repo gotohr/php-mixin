@@ -1,10 +1,10 @@
 <?php
 
-namespace Mixin;
+namespace Mix\Mixins;
 
-use Mixin\Internals\Mixin;
+use Mix\Internals\Mixin;
 
-class DataMixin extends Mixin {
+class Data extends Mixin {
 
     public function getData() {
         return $this->container->data;

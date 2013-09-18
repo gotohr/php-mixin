@@ -1,8 +1,8 @@
 <?php
 
-namespace Mixin\Internals;
+namespace Mix\Internals;
 
-use Mixin\Internals\Mixin;
+use Mix\Internals\Mixin;
 
 class Mixable {
 

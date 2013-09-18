@@ -1,8 +1,8 @@
 <?php
 
-namespace Mixin;
-use Mixin\Internals\Mixable;
-use Mixin\Internals\Mixin;
+namespace Mix;
+
+use Mix\Internals\Mixable;
 
 /**
  * @method mixed getData() gets data
@@ -15,13 +15,10 @@ class Request extends Mixable {
     public $data;
     public $content;
 
-    /**
-     * @return Mixin[]
-     */
     protected function mixins() {
         return array(
-            new DataMixin($this),
-            new ContentMixin($this)
+            new Mixins\Data($this),
+            new Mixins\Content($this)
         );
     }
 }

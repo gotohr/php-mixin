@@ -1,6 +1,6 @@
 <?php
 
-namespace Mixin\Internals;
+namespace Mix\Internals;
 
 class Mixin {
 
@@ -10,7 +10,6 @@ class Mixin {
 
     function __construct($container) {
         $this->container = $container;
-
     }
 
     public static function providedMethods() {

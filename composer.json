@@ -9,6 +9,6 @@
         }
     ],
     "autoload": {
-        "psr-0": {"Mixin": "src/"}
+        "psr-0": {"Mix": "src/"}
     }
 }
